@@ -99,7 +99,7 @@ class SiteSettings(BaseSiteSetting):
     ]
 
     api_fields = [
-        APIField("logo", serializer=ImageRenditionField("max-320x120")),
+        APIField("logo", serializer=ImageRenditionField("max-1200x450")),
         APIField("phone"),
         APIField("city"),
         APIField("region"),

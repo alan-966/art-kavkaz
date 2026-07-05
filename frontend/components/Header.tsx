@@ -58,7 +58,15 @@ export function Header({ siteSettings }: { siteSettings: SiteSettings }) {
         <div className="mx-auto flex w-full max-w-[1240px] flex-col items-center gap-3 px-[clamp(18px,4vw,48px)] py-3.5 text-center md:flex-row md:flex-wrap md:justify-between md:gap-6 md:text-left">
           <Link href="/" className="flex items-center">
             {logoUrl ? (
-              <Image src={logoUrl} alt="Арт-Кавказ" width={180} height={84} className="h-[84px] w-auto" priority />
+              <Image
+                src={logoUrl}
+                alt="Арт-Кавказ"
+                width={siteSettings.logo?.width ?? 180}
+                height={siteSettings.logo?.height ?? 84}
+                className="h-[84px] w-auto"
+                quality={90}
+                priority
+              />
             ) : (
               <span className="flex items-center gap-3 font-display text-lg font-bold tracking-[0.3em] text-navy">
                 <span className="block h-2.5 w-2.5 rotate-45 bg-accent" />

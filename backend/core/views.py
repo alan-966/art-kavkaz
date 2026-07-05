@@ -22,7 +22,7 @@ def site_settings_view(request):
     settings = SiteSettings.for_site(site)
     return JsonResponse(
         {
-            "logo": _image_repr(settings.logo, spec="max-320x120"),
+            "logo": _image_repr(settings.logo, spec="max-1200x450"),
             "phone": settings.phone,
             "city": settings.city,
             "region": settings.region,
