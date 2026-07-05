@@ -43,14 +43,14 @@ export default async function PartnersPage() {
 
       <section className="mx-auto max-w-[1320px] px-[clamp(20px,4vw,48px)] py-[clamp(40px,5vw,70px)]">
         <SectionEyebrow>{page.fund_partners_heading}</SectionEyebrow>
-        <div className="grid gap-px border border-blue/[0.16] bg-blue/[0.16] [grid-template-columns:repeat(auto-fit,minmax(170px,1fr))]">
+        <div className="grid gap-px border border-blue/[0.16] bg-blue/[0.16] [grid-template-columns:repeat(auto-fit,minmax(min(170px,100%),1fr))]">
           {page.fund_partners.map((partner) => (
             <LogoTile key={partner.id} name={partner.name} logoUrl={mediaUrl(partner.logo?.url)} />
           ))}
         </div>
 
         {page.fund_partner_details.length > 0 && (
-          <div className="mt-[30px] grid gap-6 [grid-template-columns:repeat(auto-fit,minmax(300px,1fr))]">
+          <div className="mt-[30px] grid gap-6 [grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr))]">
             {page.fund_partner_details.map((detail) => {
               const logoUrl = mediaUrl(detail.logo?.url);
               return (
@@ -75,7 +75,7 @@ export default async function PartnersPage() {
 
       <section className="mx-auto max-w-[1320px] px-[clamp(20px,4vw,48px)] pb-[clamp(70px,9vw,120px)] pt-[clamp(40px,5vw,70px)]">
         <SectionEyebrow>{page.media_partners_heading}</SectionEyebrow>
-        <div className="grid gap-px border border-blue/[0.16] bg-blue/[0.16] [grid-template-columns:repeat(auto-fit,minmax(170px,1fr))]">
+        <div className="grid gap-px border border-blue/[0.16] bg-blue/[0.16] [grid-template-columns:repeat(auto-fit,minmax(min(170px,100%),1fr))]">
           {page.media_partners.map((partner) => (
             <LogoTile key={partner.id} name={partner.name} logoUrl={mediaUrl(partner.logo?.url)} />
           ))}

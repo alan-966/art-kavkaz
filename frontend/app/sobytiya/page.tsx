@@ -33,7 +33,7 @@ export default async function EventsPage() {
         <section className="mx-auto max-w-[1320px] px-[clamp(20px,4vw,48px)] pb-[clamp(30px,4vw,50px)] pt-[clamp(20px,3vw,40px)]">
           <Link
             href={`/sobytiya/${featured.meta.slug}`}
-            className="grid border border-blue/20 bg-surface-soft transition-colors hover:border-blue/45 [grid-template-columns:repeat(auto-fit,minmax(320px,1fr))]"
+            className="grid border border-blue/20 bg-surface-soft transition-colors hover:border-blue/45 [grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr))]"
           >
             <div className="relative min-h-[380px] overflow-hidden bg-gradient-to-br from-surface-mist to-surface-tint">
               {featuredImageUrl && (

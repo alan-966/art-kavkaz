@@ -21,7 +21,7 @@ export default async function HistoryPage() {
           return (
             <div
               key={entry.id}
-              className={`relative grid gap-7 ${i < page.timeline.length - 1 ? "pb-14" : ""} [grid-template-columns:repeat(auto-fit,minmax(260px,1fr))]`}
+              className={`relative grid gap-7 ${i < page.timeline.length - 1 ? "pb-14" : ""} [grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr))]`}
             >
               <span
                 className="absolute top-1.5 h-4 w-4 rotate-45 bg-accent"

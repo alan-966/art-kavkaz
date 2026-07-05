@@ -15,7 +15,7 @@ export default async function CouncilPage() {
 
   return (
     <section className="mx-auto max-w-[1320px] px-[clamp(20px,4vw,48px)] pb-[clamp(70px,9vw,120px)] pt-[clamp(50px,6vw,80px)]">
-      <div className="grid gap-6 [grid-template-columns:repeat(auto-fit,minmax(230px,1fr))]">
+      <div className="grid gap-6 [grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr))]">
         {page.members.map((member) => {
           const photoUrl = mediaUrl(member.photo?.url);
           return (

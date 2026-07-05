@@ -63,7 +63,7 @@ export function Header({ siteSettings }: { siteSettings: SiteSettings }) {
                 alt="Арт-Кавказ"
                 width={siteSettings.logo?.width ?? 180}
                 height={siteSettings.logo?.height ?? 84}
-                className="h-[84px] w-auto"
+                className="h-[clamp(44px,9vw,84px)] w-auto max-w-full"
                 quality={90}
                 priority
               />

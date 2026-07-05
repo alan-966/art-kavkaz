@@ -27,7 +27,7 @@ export default async function PressPage() {
       </section>
 
       <section className="mx-auto max-w-[1320px] px-[clamp(20px,4vw,48px)] pb-[clamp(70px,9vw,120px)] pt-[clamp(30px,4vw,50px)]">
-        <div className="grid gap-6 [grid-template-columns:repeat(auto-fit,minmax(330px,1fr))]">
+        <div className="grid gap-6 [grid-template-columns:repeat(auto-fit,minmax(min(330px,100%),1fr))]">
           {page.press_items.map((item) => {
             const card = (
               <div className="flex h-full flex-col gap-4 border border-blue/[0.16] bg-surface-soft p-[clamp(28px,3vw,40px)] transition-colors hover:border-blue/45">

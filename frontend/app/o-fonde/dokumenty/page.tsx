@@ -14,7 +14,7 @@ export default async function DocumentsPage() {
 
   return (
     <section className="mx-auto max-w-[1320px] px-[clamp(20px,4vw,48px)] py-[clamp(50px,6vw,80px)]">
-      <div className="grid gap-[18px] [grid-template-columns:repeat(auto-fit,minmax(280px,1fr))]">
+      <div className="grid gap-[18px] [grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr))]">
         {page.documents.map((doc) => {
           const fileUrl = mediaUrl(doc.file_url);
           const content = (

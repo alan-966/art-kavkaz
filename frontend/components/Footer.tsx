@@ -29,7 +29,7 @@ export function Footer({ siteSettings }: { siteSettings: SiteSettings }) {
       className="border-t border-white/[0.12] text-white"
       style={{ backgroundImage: "linear-gradient(125deg, #1c4f76 0%, #2e6f9e 72%)" }}
     >
-      <div className="mx-auto grid w-full max-w-[1320px] gap-[clamp(32px,4vw,56px)] px-[clamp(20px,4vw,48px)] py-[clamp(56px,7vw,90px)] pb-[clamp(30px,4vw,46px)] [grid-template-columns:repeat(auto-fit,minmax(220px,1fr))]">
+      <div className="mx-auto grid w-full max-w-[1320px] gap-[clamp(32px,4vw,56px)] px-[clamp(20px,4vw,48px)] py-[clamp(56px,7vw,90px)] pb-[clamp(30px,4vw,46px)] [grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr))]">
         <div className="max-w-[300px]">
           <div className="mb-5 flex items-center gap-3">
             <span className="block h-[9px] w-[9px] rotate-45 bg-accent" />

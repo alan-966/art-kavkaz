@@ -42,7 +42,7 @@ export function EventFilter({ events }: { events: EventSummary[] }) {
         ))}
       </div>
 
-      <div className="mt-9 grid gap-6 [grid-template-columns:repeat(auto-fit,minmax(300px,1fr))]">
+      <div className="mt-9 grid gap-6 [grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr))]">
         {filtered.map((event) => (
           <EventCard key={event.id} event={event} />
         ))}

@@ -24,7 +24,7 @@ export default async function Home() {
     <>
       <HeroSlider slides={home.hero_slides.map((s) => s.value)} />
 
-      <section className="mx-auto grid max-w-[1320px] items-center gap-[clamp(40px,6vw,80px)] px-[clamp(20px,4vw,48px)] py-[clamp(70px,9vw,128px)] [grid-template-columns:repeat(auto-fit,minmax(320px,1fr))]">
+      <section className="mx-auto grid max-w-[1320px] items-center gap-[clamp(40px,6vw,80px)] px-[clamp(20px,4vw,48px)] py-[clamp(70px,9vw,128px)] [grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr))]">
         <div>
           <SectionEyebrow>{home.eyebrow}</SectionEyebrow>
           <h2 className="m-0 mb-6 font-display text-[clamp(30px,4vw,52px)] font-medium uppercase leading-[1.08] text-ink">
@@ -71,7 +71,7 @@ export default async function Home() {
             <h2 className="m-0 mb-[clamp(40px,5vw,60px)] max-w-[760px] font-display text-[clamp(30px,4vw,52px)] font-medium uppercase leading-[1.08] text-ink">
               {home.stats_heading}
             </h2>
-            <div className="grid gap-[clamp(16px,2vw,24px)] [grid-template-columns:repeat(auto-fit,minmax(218px,1fr))]">
+            <div className="grid gap-[clamp(16px,2vw,24px)] [grid-template-columns:repeat(auto-fit,minmax(min(218px,100%),1fr))]">
               {home.stats.map((stat) => (
                 <StatBlock key={stat.id} value={stat.value.value} label={stat.value.label} />
               ))}
@@ -96,7 +96,7 @@ export default async function Home() {
               Все события →
             </Link>
           </div>
-          <div className="grid gap-6 [grid-template-columns:repeat(auto-fit,minmax(320px,1fr))]">
+          <div className="grid gap-6 [grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr))]">
             {latestEvents.map((event) => (
               <EventCard key={event.id} event={event} />
             ))}
