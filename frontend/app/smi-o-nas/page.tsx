@@ -15,7 +15,7 @@ export default async function PressPage() {
 
   return (
     <>
-      <section className="mx-auto max-w-[1320px] px-[clamp(20px,4vw,48px)] pb-[clamp(30px,4vw,50px)] pt-[clamp(54px,7vw,92px)]">
+      <section className="mx-auto max-w-[1320px] px-[clamp(20px,4vw,48px)] pb-[clamp(34px,5vw,60px)] pt-[clamp(54px,7vw,92px)]">
         <SectionEyebrow>{page.eyebrow}</SectionEyebrow>
         <h1 className="m-0 font-display text-[clamp(38px,6.4vw,86px)] font-medium uppercase leading-[0.98] text-ink-strong">
           {page.title}
@@ -28,7 +28,7 @@ export default async function PressPage() {
         )}
       </section>
 
-      <section className="mx-auto max-w-[1320px] px-[clamp(20px,4vw,48px)] pb-[clamp(70px,9vw,120px)] pt-[clamp(30px,4vw,50px)]">
+      <section className="mx-auto max-w-[1320px] px-[clamp(20px,4vw,48px)] pb-[clamp(70px,9vw,120px)]">
         <div className="grid gap-6 [grid-template-columns:repeat(auto-fit,minmax(min(330px,100%),1fr))]">
           {page.press_items.map((item) => {
             const card = (

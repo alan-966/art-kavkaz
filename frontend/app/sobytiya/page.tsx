@@ -22,15 +22,21 @@ export default async function EventsPage() {
 
   return (
     <>
-      <section className="mx-auto max-w-[1320px] px-[clamp(20px,4vw,48px)] pb-[clamp(30px,4vw,50px)] pt-[clamp(54px,7vw,92px)]">
+      <section className="mx-auto max-w-[1320px] px-[clamp(20px,4vw,48px)] pb-[clamp(34px,5vw,60px)] pt-[clamp(54px,7vw,92px)]">
         <SectionEyebrow>{page.eyebrow}</SectionEyebrow>
         <h1 className="m-0 font-display text-[clamp(38px,6.4vw,86px)] font-medium uppercase leading-[0.98] text-ink-strong">
           {page.title}
         </h1>
+        {page.intro_text && (
+          <div
+            className="mt-7 max-w-[620px] text-[clamp(16px,1.7vw,20px)] font-light leading-[1.65] text-[#3a4c63]"
+            dangerouslySetInnerHTML={{ __html: page.intro_text }}
+          />
+        )}
       </section>
 
       {featured && (
-        <section className="mx-auto max-w-[1320px] px-[clamp(20px,4vw,48px)] pb-[clamp(30px,4vw,50px)] pt-[clamp(20px,3vw,40px)]">
+        <section className="mx-auto max-w-[1320px] px-[clamp(20px,4vw,48px)] pb-[clamp(30px,4vw,50px)]">
           <Link
             href={`/sobytiya/${featured.meta.slug}`}
             className="grid border border-blue/20 bg-surface-soft transition-colors hover:border-blue/45 [grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr))]"
@@ -65,7 +71,7 @@ export default async function EventsPage() {
         </section>
       )}
 
-      <section className="mx-auto max-w-[1320px] px-[clamp(20px,4vw,48px)] pb-[clamp(70px,9vw,120px)] pt-[clamp(20px,3vw,40px)]">
+      <section className="mx-auto max-w-[1320px] px-[clamp(20px,4vw,48px)] pb-[clamp(70px,9vw,120px)]">
         <EventFilter events={rest} />
       </section>
     </>

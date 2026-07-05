@@ -20,7 +20,7 @@ export function EventFilter({ events }: { events: EventSummary[] }) {
 
   return (
     <>
-      <div className="mt-9 flex flex-wrap gap-3">
+      <div className="flex flex-wrap gap-3">
         <button
           onClick={() => setActive(null)}
           className={`border px-5 py-2.5 text-xs uppercase tracking-[0.14em] transition-colors ${
